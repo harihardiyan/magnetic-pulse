@@ -32,7 +32,7 @@ A bespoke 3D visualization of the Earth using **D3.js** and **TopoJSON**.
 *   **Historical Trends**: Analyze magnetic field mutations from 1900 up to 2030 predictions.
 *   **Interactive Charting**: A dynamic SVG-based time-series graph allowing users to scrub through a century of geomagnetic data.
 
-### 3. Professional Archival Suite (SSS-Grade Reports)
+### 3. Professional Archival Suite 
 *   **PDF Export**: Generate high-fidelity scientific reports including geodetic reference data, absolute magnetic components, and secular variation trends.
 *   **Vector Rendering**: Exports current trend charts directly into the PDF for archival purposes.
 
