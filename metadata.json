@@ -1,0 +1,7 @@
+{
+  "name": "Magnetic Pulse: Global Geomagnetic Suite",
+  "description": "Professional geophysical analytical toolkit utilizing the IGRF-14 model for high-precision magnetic field calculations, 3D visualization, and scientific reporting.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
