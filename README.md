@@ -1,8 +1,10 @@
+
 # Magnetic Pulse: Global Geomagnetic Analytical Suite
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![IGRF-14](https://img.shields.io/badge/Model-IGRF--14-blue)](https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html)
 [![Version](https://img.shields.io/badge/Version-1.0.0-emerald)](https://github.com/harihardiyan/magnetic-pulse)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-repo-id/deploy-status)](https://www.netlify.com)
 
 **Magnetic Pulse** is a high-precision geophysical dashboard designed for the analysis and visualization of Earth's magnetic field. Powered by the **IGRF-14 (International Geomagnetic Reference Field)** model, this toolkit provides researchers, navigators, and hobbyists with accurate data regarding magnetic declination, inclination, and field intensity across a temporal range from 1900 to 2030.
 
@@ -26,64 +28,53 @@ The dashboard utilizes a simplified spherical harmonic expansion to calculate th
 A bespoke 3D visualization of the Earth using **D3.js** and **TopoJSON**.
 *   **Precision Navigation**: Optimized for both Desktop (Scroll-to-Zoom) and Mobile (Dedicated UI controls).
 *   **Real-time Tracking**: Visualizes the Target location alongside the Geodetic North and the drifting Magnetic North Pole.
-*   **Atmospheric Rendering**: Advanced SVG filters providing a "holographic" aesthetic with depth-culling for back-face markers.
 
 ### 2. Temporal Pulse Analysis
 *   **Historical Trends**: Analyze magnetic field mutations from 1900 up to 2030 predictions.
 *   **Interactive Charting**: A dynamic SVG-based time-series graph allowing users to scrub through a century of geomagnetic data.
 
-### 3. Professional Archival Suite 
-*   **PDF Export**: Generate high-fidelity scientific reports including geodetic reference data, absolute magnetic components, and secular variation trends.
-*   **Vector Rendering**: Exports current trend charts directly into the PDF for archival purposes.
-
-### 4. Advanced Navigation Aid
-*   **Dynamic Compass**: A real-time visualizer that accounts for local magnetic declination (deviation from True North), providing critical orientation data for field-work simulation.
+### 3. Professional Archival Suite (SSS-Grade Reports)
+*   **PDF Export**: Generate high-fidelity scientific reports including geodetic reference data and absolute magnetic components.
 
 ---
 
 ## 🛠 Tech Stack
 
 *   **Frontend**: React 19, TypeScript
-*   **Visualization**: D3.js v7, TopoJSON
-*   **Styling**: Tailwind CSS
+*   **Bundler**: Vite
+*   **Visualization**: D3.js v7
 *   **Reporting**: jsPDF, autoTable
-*   **Geodata**: OpenStreetMap (Nominatim API)
 
 ---
 
-## 📖 Usage Instructions
+## 📖 Deployment Guide
+
+### Deploy to Netlify (Recommended)
+
+1.  **Push code to GitHub**:
+    Create a new repository and push all files including the newly added `netlify.toml` and `package.json`.
+2.  **Connect to Netlify**:
+    - Log in to [Netlify](https://app.netlify.com).
+    - Select **"Add new site"** > **"Import an existing project"**.
+    - Choose **GitHub** and select the `magnetic-pulse` repository.
+3.  **Build Settings**:
+    Netlify will automatically detect the settings from `netlify.toml`:
+    - **Build Command**: `npm run build`
+    - **Publish directory**: `dist`
+4.  **Deploy**: Click **"Deploy site"**. Your toolkit will be live in seconds!
 
 ### Local Development
 
-1.  **Clone the Repository**
+1.  **Clone & Install**:
     ```bash
     git clone https://github.com/harihardiyan/magnetic-pulse.git
-    cd magnetic-pulse
-    ```
-
-2.  **Install Dependencies**
-    ```bash
     npm install
     ```
 
-3.  **Execute Environment**
+2.  **Run Dev Server**:
     ```bash
-    npm start
+    npm run dev
     ```
-
-### How to use the Dashboard
-1.  **Search**: Enter a city name, region, or IATA airport code in the primary search bar.
-2.  **Calibrate**: Use the **Epoch Slider** to select a specific year for analysis.
-3.  **Explore**: Use the 3D Globe to visualize the spatial context of your coordinates. Drag to rotate, and use the `+` / `-` buttons for precision zoom.
-4.  **Archive**: Click **"Export SSS-Report"** to download a comprehensive PDF analysis of the current dataset.
-
----
-
-## 🤝 Acknowledgments
-
-This project is built upon the collective efforts of the international geomagnetic community. Special thanks to:
-*   **IAGA (International Association of Geomagnetism and Aeronomy)** for the IGRF coefficient datasets.
-*   The **OpenStreetMap** contributors for geocoding services.
 
 ---
 
@@ -98,6 +89,3 @@ Geophysical Software Engineer
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Disclaimer: This tool is intended for educational and analytical purposes. For critical maritime or aviation navigation, always refer to certified official governmental magnetic models.*
